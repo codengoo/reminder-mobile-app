@@ -3,8 +3,6 @@ import { useRef } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import BottomDrawer, { BottomDrawerMethods } from 'react-native-animated-bottom-drawer';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import Button from '../button';
-import Input from '../input';
 
 export interface IListData {
     icon: keyof typeof Ionicons["glyphMap"],
@@ -28,7 +26,7 @@ export default function ListFavItem({ icon, title, value, color, last, editable 
                     />
                 }
 
-                <View className={'p-2 rounded-full w-fit h-fit ' + color}>
+                <View className={`p-2 rounded-full w-fit h-fit ${color}`}>
                     <Ionicons name={icon} size={24} color="white" />
                 </View>
             </View>

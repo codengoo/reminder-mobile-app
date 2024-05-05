@@ -18,9 +18,7 @@ export default function InfoBox({ title, iconName, value, color }: IProps) {
         >
             <View className="flex flex-row justify-between mb-3">
                 <View
-                    className={
-                        "flex justify-center items-center p-2 rounded-full " +
-                        color}>
+                    className={`flex justify-center items-center p-2 rounded-full ${color}`}>
                     <Ionicons name={iconName} size={24} color="white" />
                 </View>
                 <Text className="text-3xl font-bold font-mon">{value}</Text>

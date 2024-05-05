@@ -1,13 +1,13 @@
-import { FlatList, ScrollView, Text, Touchable, TouchableOpacity, View } from "react-native";
-import Input from "../../components/input";
-import InfoBox from "../../components/info_box";
-import Button from "../../components/button";
-import ListFavItem, { IListData } from "../../components/list_fav";
-import { EColor } from "../../types";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import Input from "@/components/input";
+import InfoBox from "@/components/info_box";
+import Button from "@/components/button";
+import ListFavItem, { IListData } from "@/components/list_fav";
+import { EColor } from "@/types";
 import { useState } from "react";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ScreenProps } from "../../types/navigation";
+import { ScreenProps } from "@/types/navigation";
 
 const data: IListData[] = [
   {
@@ -55,12 +55,6 @@ const data: IListData[] = [
 ]
 
 export default function HomeScreen({ navigation }: ScreenProps<"HomeScreen">) {
-  const [showEditBtn, setShowEditBtn] = useState<boolean>(false);
-
-  function onShowEditBtn() {
-    setShowEditBtn(true);
-  }
-
   function handleOptionPress() {
     console.log("Hello world")
     navigation.navigate("CustomHomeScreen")

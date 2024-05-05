@@ -6,12 +6,16 @@ interface IProps {
     title: string,
     iconName: IconName
     value: number
-    color: EColor
+    color: EColor,
 }
 
 export default function InfoBox({ title, iconName, value, color }: IProps) {
+
     return (
-        <View className="bg-white rounded-2xl flex-1 p-5" style={{ flexBasis: 150 }}>
+        <View
+            className="bg-white rounded-2xl flex-1 p-5"
+            style={{ flexBasis: 150 }}
+        >
             <View className="flex flex-row justify-between mb-3">
                 <View
                     className={
